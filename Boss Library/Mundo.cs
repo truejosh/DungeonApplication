@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DungeonProgram
+namespace Boss_Library
 {
-    class Program
+    public class Mundo : Boss
     {
-        static void Main(string[] args)
+        public Mundo() : base("Mundo", 50, 50)
         {
-        }//main
-    }//class
-}//namespace
+
+        }
+    }
+}

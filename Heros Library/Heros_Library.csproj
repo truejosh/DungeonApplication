@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85B3E245-63F0-4C9D-8E35-7FED5264FA14}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DungeonProgram</RootNamespace>
-    <AssemblyName>DungeonProgram</AssemblyName>
+    <ProjectGuid>{A6F5ACAE-DBF5-4FC1-8CD8-54B32E46DC7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heros_Library</RootNamespace>
+    <AssemblyName>Heros Library</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +23,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>DungeonProgram.MainDungeon</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,29 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainDungeon.cs" />
+    <Compile Include="Clown.cs" />
+    <Compile Include="Dwarf.cs" />
+    <Compile Include="Heros.cs" />
+    <Compile Include="Knight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Boss Library\Boss_Library.csproj">
-      <Project>{6715297b-f144-423e-adab-d4cc36835901}</Project>
-      <Name>Boss_Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DungeonLibrary\Fight_Library.csproj">
-      <Project>{e145c367-476a-42b6-ac8f-d3369f51095b}</Project>
-      <Name>Fight_Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Heros Library\Heros_Library.csproj">
-      <Project>{a6f5acae-dbf5-4fc1-8cd8-54b32e46dc7c}</Project>
-      <Name>Heros_Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Items Library\Items_Library.csproj">
-      <Project>{d4e177c8-17e5-429e-ac1d-42eec43a697c}</Project>
-      <Name>Items_Library</Name>
-    </ProjectReference>
+    <Compile Include="Special.cs" />
+    <Compile Include="Vampire.cs" />
+    <Compile Include="Wizard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
